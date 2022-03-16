@@ -5,7 +5,7 @@ resource "azurerm_virtual_machine" "CloudAvailServ" {
   location              = var.location
   resource_group_name   = var.resourceGroupName
   network_interface_ids = ["${element(azurerm_network_interface.CA-NetInt.*.id, 01)}"] # Picks an id out of an array when the id is created later
-  depends_on            = [azurerm_network_interface.CA-NetInt] # placeholder for when a network interface is made 
+  depends_on            = [azurerm_network_interface.CA-NetInt] # placeholder for when a network interface is made See note.
   vm_size               = "Standard_B1s"
 
   
