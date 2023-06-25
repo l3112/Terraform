@@ -5,6 +5,10 @@ provider "azurerm" {
   features {}
 }
 # REMEMBER TO CHANGE TO THE CA2 WORKSPACE default is broken.
+# actually it isn't it's about drift
+#check how to avoid drift
+
+
 # terraform workspace select
 #this is the network security group
 resource "azurerm_network_security_group" "CA" {
