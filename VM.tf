@@ -31,7 +31,8 @@ resource "azurerm_virtual_machine" "CloudAvailServ" {
   os_profile {
     computer_name  = "CAServ"
     admin_username = "azureuser"
-    admin_password = "3lWc7mrPd14?!"
+    admin_password = "3lWc7mrPd14?!" #not real
+    sensitive = true
   } 
 
   
